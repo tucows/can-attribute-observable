@@ -501,7 +501,7 @@ var attr = {
 	attribute: function(attrName) {
 		return {
 			get: function() {
-				return (attrsNamespacesURI[attrName]) ? this.getAttributeNS(attrsNamespacesURI[attrName], attrName) : this.getAttribute(attrName);
+				return this.getAttribute(attrName);
 			},
 			set: function(val) {
 				if (attrsNamespacesURI[attrName]) {
